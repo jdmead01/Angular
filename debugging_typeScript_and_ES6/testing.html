@@ -1,0 +1,33 @@
+<script>
+
+// var - is used when we want to define the scope, and this will be scoped within functions only.
+
+
+function testing() {
+    var x = 10;
+    console.log(x) // ok
+}
+console.log(x) 
+
+// Error, undefined
+
+// let - is used when we want to define the scope, within blocks { }, this includes loops, a variable declared as a let within an if block, or for loop block, will not be defined outside of the if block, or the for loop block.
+
+if (true) {
+    let x = 10;
+    console.log(x) // ok
+}
+console.log(x) // Error, undefined
+
+// const - is similar to let, in that it's scoped within blocks, but we are unable to change its type, or value once set. Note: if an object is const, we can't change the object's structure (such as adding, or replacing keys), but we can change the object's values.
+
+const myobj = {
+    a: 1, 
+    b: 2
+}
+myobj.a = 5 // ok
+myobj.abc = 3 // Error
+myobj = {x:1, y:2, z:3} // Error
+
+
+</script>

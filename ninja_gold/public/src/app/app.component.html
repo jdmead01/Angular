@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo"
+    src="https://images.mmorpg.com/images/heroes/news/53111.jpg">
+</div>
+<h1>Gold Count: {{ allGold }}</h1>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener">House</a></h2><button (click)="getFarmGoldFromService(2,5)">2-5
+      Gold</button>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" >Cave</a></h2><button
+      (click)="getFarmGoldFromService(5,7)">5-7 Gold</button>
+  </li>
+  <li>
+    <h2><a target="_blank">Farm</a></h2><button (click)="getFarmGoldFromService(10,15)">10-15 Gold</button>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener">Casino</a></h2><button
+      (click)="getFarmGoldFromService(-50, 50)">+/- 50 Gold</button>
+  </li>
+</ul>
+<h1>LOG: 
+  <ul>
+    <li *ngFor="let g of gold">{{ g }}</li>
+  </ul>
