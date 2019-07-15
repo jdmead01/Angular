@@ -4,6 +4,10 @@ const tasks = require("../controllers/tasks");
 
 module.exports = function (app) {
 
+    // app.get("/", function (request, response) {
+    //     tasks.showAll(request, response);
+    // });
+
     app.get("/tasks", function (request, response) {
         tasks.showAll(request, response);
     });

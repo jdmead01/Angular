@@ -1,7 +1,20 @@
-var mongoose = require("mongoose");
-var Task = mongoose.model("Task");
+const mongoose = require("mongoose");
+const Task = mongoose.model("Task");
 
 module.exports = {
+
+    home: function(request, response){
+        if (error) {
+            console.log(error);
+            response.json({
+                message: "Error",
+                error: error
+            });
+        }
+         else {
+            response.redirect('showAll')
+        }
+    },
 
     showAll : function (request, response) {
         Task.find({}, function (error, data) {
@@ -16,7 +29,8 @@ module.exports = {
                 response.json({
                     message: "Success",
                     data: data
-                });
+                }); 
+                // response.render('index', {data: data})
             };
         });
     },

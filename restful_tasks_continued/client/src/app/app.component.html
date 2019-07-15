@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -11,10 +11,40 @@
     <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+<div style="padding:50px;text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
 
+  <h1 >
+    All the tasks:
+  </h1>
+
+  <ul style="display:inline-block">
+    <li *ngFor="let task of tasks" style="text-align:initial;">
+      <h2>{{ task.title }} - {{ task.description }}</h2>
+    </li>
+  </ul>
+
+  <h1>
+    The third tasks:
+  </h1>
+
+  <ul style="display:inline-block">
+    <div *ngFor="let task of tasks;
+                let i = index;
+                let fst = first;
+                let lst = last"
+          style="display:inline-block">
+      <li *ngIf="lst" style="text-align:initial;">
+        <h2>{{ task.title }} - {{ task.description }}</h2>
+      </li>
+    </div>
+  </ul>
+</div>
