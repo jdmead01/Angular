@@ -1,0 +1,71 @@
+
+
+#wrapper{
+  border: solid 10px blue;
+  /* background-color: palegoldenrod; */
+  background-image: url("/taskCRUD.png")
+}
+
+.new_form{
+  border: solid 5px yellow;
+  padding: 10px 10px 10px 10px;
+}
+
+#title{
+  margin: 0px 0px 0px 0px;
+  background-color: grey;
+  font: 25px;
+}
+
+label#desc{
+  margin: 0px 0px 0px 0px;
+  background-color: grey;
+  font: 25px;
+}
+.input_title {
+  margin-left: 45px;
+  height: 20px;
+  font: 18px;
+  border: 2px solid black;
+}
+
+.description_input{
+  height: 20px;
+  font: 18px;
+  border: 2px solid black;
+}
+.submit_button{
+  margin: 8px 0px 0px 18px;
+  display: inline-block;
+  background: #9ba3a8;
+  background-image: -webkit-linear-gradient(top, #9ba3a8, #556c7a);
+  background-image: -moz-linear-gradient(top, #9ba3a8, #556c7a);
+  background-image: -ms-linear-gradient(top, #9ba3a8, #556c7a);
+  background-image: -o-linear-gradient(top, #9ba3a8, #556c7a);
+  background-image: linear-gradient(to bottom, #9ba3a8, #556c7a);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.submit_button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+div.task_list{
+  margin: 0px 0px 0px 0px;
+  vertical-align: top;
+}
+#task_list{
+  margin-left: 15px;
+}
+

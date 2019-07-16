@@ -23,41 +23,35 @@
       {{ title }}
     </h1>
 
-    <h1 >
+    <h1>
       All the tasks:
     </h1>
 
     <button (click)="getAllTasksWithClick()">Click to get all tasks</button><br/>
 
-    <ul style="display:inline-block">
-      <li *ngFor="let task of tasks" style="text-align:initial;">
+    <div class="all" *ngIf="oneTask.length < 1">
+      <ul style="display:inline-block">
+        <li *ngFor="let task of tasks" style="text-align:initial;">
           <h2>{{ task.title }} - <button (click)="getOneTaskFromService(task._id)">show</button></h2>
-          <h5 style="color: grey;">    - ID : {{ task._id }}</h5>
+          <!-- <button class="delete" this.delete >Delete</button>
+          <form>
+            <input type="button" value="Go back!" onclick="history.back()">
+          </form> -->
+          <!-- <h5 style="color: grey;"> - ID : {{ task._id }}</h5> -->
         </li>
-    </ul>
-<div class="details">
-  <div class="title">
-    {{ oneTask[0].title }} - {{ oneTask[0].description }}
-  </div>
-</div>
+      </ul>
+    </div>
 
-
-
-
-
-
-
-    <!-- <h1>
+    <div class="details">
+      <div class="title">
+        {{ oneTask[0].title }} - {{ oneTask[0].description }}
+      </div>
+    </div>
+    <h1>
       One task with ID:
     </h1>
-
     <input (keyup)="onKey($event)"><br/>
     <input type="submit" value="Click to get one task" (click)="getOneTaskWithClick()"><br/>
-   -->
-
-
-
-
     <!-- <ul style="display:inline-block">
       <div *ngFor="let task of oneTask;
                   let i = index;
