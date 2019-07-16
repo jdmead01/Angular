@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<div class="main">
+  <div style="padding:50px;text-align:center; border: solid 5px yellow;">
+    <h1>{{ title }}</h1>
+    <!--
+    <h1>
+      All the tasks:
+    </h1> -->
+
+    <button class="butn" (click)="getAllTasksWithClick()">Get All Tasks</button><br />
+
+    <!-- <div class="all" *ngIf="oneTask.length < 1"> -->
+      <ul style="display:inline-block; border: solid 5px blue; ">
+        <li *ngFor="let task of tasks" style="list-style-type: none; text-align:initial;">
+          <div class="title">
+            <h2>{{ task.title }}</h2>
+          </div>
+          <div class="right">
+            <button class="w3-button w3-xlarge w3-circle w3-teal"
+              style="border-radius: 35%; background-color: teal; color: white;"
+              (click)="getOneTaskFromService(task._id)">show</button>
+          </div>
+        </li>
+      </ul>
+    <!-- </div> -->
+    <!-- <div class="details">
+      <div class="title_1">
+        {{ oneTask.title }} - {{ oneTask.description }}
+      </div>
+    </div> -->
+    <!-- <h1>
+      One task with ID:
+    </h1>
+    <input (keyup)="onKey($event)"><br/> -->
+    <!-- <input class="butn" type="submit" value="Click to get one task" (click)="getOneTaskWithClick()"><br /> -->
+    <ul style="display:inline-block">
+      <div *ngFor="let task of oneTask;
+                  let i = index;
+                  let fst = first;
+                  let lst = last" style="display:inline-block">
+        <!-- <li style="text-align:initial;">
+          <h2>{{ task.title }}<button (click)="getOneTaskFromService(task._id)">show</button>
+            </h2>
+        </li> -->
+      </div>
+    </ul>
+  </div>
+
+  <div class="root" style="border: solid 14px green;" *ngIf="selectedTask">
+    <!-- tip: use css to place a border around your different components to better visualize them -->
+            <h1>Welcome to {{ title }}!</h1>
+            <app-task *ngIf="selectedTask" [taskToShow]="oneTask[0]"></app-task>
+            <!-- use the selector of the task component to nest it within the root component -->
+      </div>
+
+  </div>
