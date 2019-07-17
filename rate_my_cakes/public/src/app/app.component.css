@@ -1,0 +1,38 @@
+.container{
+  border:solid 5px black;
+}
+.title{
+  text-align: center;
+}
+
+.form{
+  border: solid 5px black;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left
+}
+.cake_entries{
+  border: solid 5px red;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  overflow: auto;
+  max-height: 400px;
+  width: 500px
+}
+
+textarea{
+  display: inline-block;
+  vertical-align: top;
+  text-align: left
+}
+
+img{
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left
+}
+.main_img{
+  text-align: center;
+}
