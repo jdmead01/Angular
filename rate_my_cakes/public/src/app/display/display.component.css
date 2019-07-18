@@ -1,0 +1,30 @@
+.header{
+  border: solid 2px black;
+  /* display: inline-block; */
+  vertical-align: top;
+}
+
+.image{
+  border: 2px solid red;
+  display: inline-block;
+}
+
+.details{
+  padding: 10px;
+  display: inline-block;
+  /* border: 5px solid orange; */
+  position: relative;
+  min-height: 100%;
+  vertical-align: top;
+  /* background:black; */
+}
+
+img{
+  width: 250px;
+  padding: 5px;
+}
+
+body{
+  min-height:100%;
+  background:red;
+}

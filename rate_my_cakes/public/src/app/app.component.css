@@ -1,38 +1,65 @@
 .container{
   border:solid 5px black;
+  align-content: center;
 }
 .title{
   text-align: center;
 }
 
-.form{
-  border: solid 5px black;
+a{
   display: inline-block;
-  vertical-align: top;
-  text-align: left
 }
-.cake_entries{
-  border: solid 5px red;
+
+.main_img{
+  text-align: center;
+}
+
+.form{
+  border: solid 2px black;
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  overflow: auto;
-  max-height: 400px;
-  width: 500px
-}
-
-textarea{
-  display: inline-block;
-  vertical-align: top;
-  text-align: left
+  padding: 10px;
 }
 
 img{
   width: 150px;
+  padding: 5px;
+}
+
+.right_side{
+  margin: 0px 8px 0px 5px;
   display: inline-block;
   vertical-align: top;
-  text-align: left
+  border: double 1px black;
+  overflow: scroll;
+  padding: 10px;
+  height: 200px;
 }
-.main_img{
-  text-align: center;
+
+.img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dropdown{
+  margin: 11px 8px 0px 5px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+textarea{
+  border: solid 2px black;
+  margin: 9px 0px 0px 0px;
+  height: 50px;
+}
+
+select.dropdown{
+  width: 128px;
+  margin: 0px 0px 0px 0px;
+}
+input{
+  width: 128px;
+  margin: 0px 0px 0px 0px;
+
 }
