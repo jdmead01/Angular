@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  /* background-color: #666; */
+  background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fknoxseminary.edu%2Fwp-content%2Fuploads%2F2014%2F09%2FBooks-Background-1.jpg&f=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+#add_author{
+  width: 162px;
+  margin: 0px 0px 0px 0px;
+}
+
+li{
+  margin: 13px 0px 0px 0px;
+}
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #922F2F;
+  padding: 11px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0px 0px 0px 0px;
+  vertical-align: top;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #6A783E;
+  /* background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.icytales.com%2Fwp-content%2Fuploads%2F2016%2F03%2Finspiring-boy-reading-book-in-a-boat-artistic-vintage-high-resolution-wallpaper-for-desktop-background-.jpg&f=1"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+  border: 2px solid black;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+.default {color: black;}
