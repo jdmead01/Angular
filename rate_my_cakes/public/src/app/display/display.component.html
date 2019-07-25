@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cake Description</title>
-</head>
-<body>
-    <img style="display: inline-block;" src="{{ImageUrl}}" alt="">
-    <h6>{{ cakeToShow.data.bakerName }}</h6>
+<div class="header">
+  <h1>Baked by {{ cakeToShow.data.bakerName }}</h1>
+</div>
+
+<!-- // Image  -->
+<div class="image">
+    <img style="display: inline-block;" src="{{cakeToShow.data.ImageUrl}}" alt="">
+</div>
+
+<div class="details">
     <p>{{ cakeToShow.description }}</p>
-</body>
-</html>
+    <P>Average Rating: </P>
+    <p>Comment</p>
+    <p>number of stars given</p>
+
+</div>
 
 

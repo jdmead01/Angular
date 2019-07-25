@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HttpService } from "./http.service";
+import { HttpService } from './http.service';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
       console.log('Got our Tasks!', data);
       this.tasks = data;
     });
-  };
+  }
   getAllTasksWithClick() {
     this.getTasksFromService();
   }

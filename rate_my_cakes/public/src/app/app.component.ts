@@ -9,41 +9,49 @@ import { HttpService } from './http.service';
 
 export class AppComponent implements OnInit {
     title = 'Rate My Cakes Hooker';
-    newCake = {bakerName: '', ImageUrl: ''};
-    allCakes = [];
-    imageUrl = '';
-    loggedIn: boolean;
-    cakeToShow = {};
+    newCake: any;
+    allCakes: any;
+    // imageUrl = '';
+    // loggedIn: boolean;
+    cakeToShow: any;
+    observable: any;
 
     constructor(private _httpService: HttpService) {}
 
     ngOnInit() {
       this.getCakesFromService();
-    };
+      this.newCake = {bakerName: '', ImageUrl: ''};
+      this.allCakes = [];
+      this.observable = [];
 
-    getCakeFromService(id:Number) {
-      let observable = this._httpService.getCake(id);
-      observable.subscribe(data =>{
-        console.log('########################## in getCakeFromService bitches', data);
-        this.imageUrl = data['data']['ImageUrl'];
+    }
+
+    getCakesFromService() {
+      const observable = this._httpService.getCakes();
+      observable.subscribe(data => {
+        console.log('########################## in CakesFromService bitches', data);
+        this.allCakes = data;
+        console.log("cakeToShow");
+        console.log(this.cakeToShow);
+      });
+    }
+
+    getCakeFromService(id: number): void {
+      const observable = this._httpService.getCake(id);
+      observable.subscribe(data => {
+        console.log('########################## in 1 CakeFromService', data);
+        // this.imageUrl = data['data']['ImageUrl'];
         this.cakeToShow = data;
       });
 
     }
     onSubmit() {
-      console.log('I am in onSubmit for a new cake!', this.newCake)
-      let observable = this._httpService.createCake(this.newCake);
-      observable.subscribe(data =>{
-        console.log('########################## in onSubmit bitches', data)
+      console.log('I am in onSubmit for a new cake!', this.newCake);
+      const observable = this._httpService.createCake(this.newCake);
+      observable.subscribe(data => {
+        console.log('########################## in onSubmit bitches', data);
       });
     }
-      getCakesFromService() {
-        let observable = this._httpService.getCakes();
-        observable.subscribe(data =>{
-          console.log('########################## in getCakeFromService bitches', data)
-          this.allCakes = data['data'];
-        });
-      }
 //     tasks = [];
 //     getTasksFromService(){
 //         // this._httpService.getTasks();

@@ -8,7 +8,6 @@ import { HttpService } from '../http.service';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-    @Input() ImageUrl: any;
     @Input() cakeToShow: any;
       // tslint:disable-next-line:variable-name
       constructor(private _httpService: HttpService) {}

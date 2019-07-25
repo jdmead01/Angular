@@ -12,7 +12,7 @@
     <div class="new_form">
         <h1>New Task</h1>
           <form>
-        <!-- <p>{{ newTask | json }}</p> -->
+        <p>{{ newTask | json }}</p>
           <label style="background: lightgrey;" id="title" >Title : <input class="input_title" type="text" name="newTask.title" [(ngModel)]="newTask.title"></label><br>
           <label style="background: lightgrey;" id="desc" >Description : <input class="description_input" type="text" name="newTask.description" [(ngModel)]="newTask.description"></label>
           <input class ="submit_button" type="submit" value="Create" (click)="onNewTaskSubmit()">
@@ -36,7 +36,7 @@
 
   <div *ngIf="editTask" style="display:inline-block; vertical-align:top; width: 400px;">
     <h1>Edit a task</h1>
-    <!-- <p>{{ editTask | json }}</p> -->
+    <p>{{ editTask | json }}</p>
     <div
       style="border:1px solid black; border-radius:10px; width:300px; padding:10px; margin:15px; background-color: lightgreen; ">
       <form (submit)="onEditSubmit()">
