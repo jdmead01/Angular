@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { NgModule, Component } from '@angular/core';
+=======
+import { NgModule } from '@angular/core';
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -8,9 +12,12 @@ import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
+<<<<<<< HEAD
     path: 'home', component: HomeComponent,
   },
   {
+=======
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
     path: 'new',
     component: NewComponent
   },
@@ -21,7 +28,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+<<<<<<< HEAD
    redirectTo: '/home'
+=======
+    component: HomeComponent
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
   },
   // {
   //   path: "**",

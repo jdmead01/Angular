@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { HttpService } from "./../http.service";
 
 import { ActivatedRoute, Router } from '@angular/router';
@@ -6,6 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 ///// < Purpose >
 // // ActivatedRoute : URL parameter extraction
 // // Router : URL redirection
+=======
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
 
 @Component({
   selector: 'app-edit',
@@ -13,6 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+<<<<<<< HEAD
   id : string;
   private sub: any;
   author: any;
@@ -60,6 +64,12 @@ export class EditComponent implements OnInit {
 
   reRouteToHome () {
     this._router.navigate(['/']);
+=======
+
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
   }
 
 }

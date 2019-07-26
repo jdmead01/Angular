@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { HttpService } from "./../http.service";
+=======
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
 
 @Component({
   selector: 'app-home',
@@ -8,6 +11,7 @@ import { HttpService } from "./../http.service";
 })
 export class HomeComponent implements OnInit {
 
+<<<<<<< HEAD
   authors = [];
 
   constructor(private _httpService: HttpService) {
@@ -32,6 +36,11 @@ export class HomeComponent implements OnInit {
       console.log("Successfully delete data from server!", data);
       this.getAuthorsFromService();
     });
+=======
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
   }
 
 }

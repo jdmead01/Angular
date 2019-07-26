@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { HttpService } from "./../http.service";
 
 import { Router } from "@angular/router";
+=======
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
 
 @Component({
   selector: 'app-new',
@@ -9,6 +12,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./new.component.css']
 })
 export class NewComponent implements OnInit {
+<<<<<<< HEAD
   author: any;
   error: any;
 
@@ -43,4 +47,12 @@ export class NewComponent implements OnInit {
     this._router.navigate(["/"]);
   };
 
+=======
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+>>>>>>> 7d20c188a98e97ed59d72309be23879aa5916927
 }
